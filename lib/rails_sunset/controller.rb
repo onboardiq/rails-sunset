@@ -21,14 +21,14 @@ module RailsSunset
 
           # Shove a Sunset header into HTTP Response for clients to sniff on
           # https://tools.ietf.org/html/draft-wilde-sunset-header-03
-          response.headers['Sunset'] = datetime.httpdate
+          response.set_header('Sunset', datetime.httpdate)
 
           if link.present?
             sunset_link_header = sprintf('<%s>; rel="sunset";', link)
             if response.headers['Link'].present?
               response.headers['Link'] += (', ' + sunset_link_header)
             else
-              response.headers['Link'] = sunset_link_header
+              response.set_header('Link', sunset_link_header)
             end
           end
         end

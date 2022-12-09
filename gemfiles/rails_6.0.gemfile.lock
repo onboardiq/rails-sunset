@@ -1,8 +1,8 @@
 PATH
   remote: ..
   specs:
-    rails-sunset (0.1.0)
-      rails (>= 4.2, < 7)
+    rails-sunset (0.2.0)
+      rails (>= 6.0, < 7)
 
 GEM
   remote: https://rubygems.org/
