@@ -2,7 +2,7 @@ PATH
   remote: ..
   specs:
     rails-sunset (0.2.0)
-      rails (>= 6.0, < 7)
+      rails (>= 6.0, < 8)
 
 GEM
   remote: https://rubygems.org/
@@ -222,4 +222,4 @@ DEPENDENCIES
   wwtd
 
 BUNDLED WITH
-   2.3.22
+   2.4.7
