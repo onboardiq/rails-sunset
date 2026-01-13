@@ -17,7 +17,7 @@ module RailsSunset
           # Shove a deprecation warning into the console or wherever it goes
           klass = controller.class
           method = params['action']
-          ActiveSupport::Deprecation.warn("#{klass}##{method} deprecated endpoint (sunset date #{datetime.iso8601}) has been called by #{user_agent}")
+          ActiveSupport::Deprecation.new.warn("#{klass}##{method} deprecated endpoint (sunset date #{datetime.iso8601}) has been called by #{user_agent}")
 
           # Shove a Sunset header into HTTP Response for clients to sniff on
           # https://tools.ietf.org/html/draft-wilde-sunset-header-03
